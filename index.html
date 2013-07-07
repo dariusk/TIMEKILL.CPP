@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TIMEKILL.CPP</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+        color: rgba(0,0,0,0.75);
+        font-family: sans-serif;
+      }
+      h1 {
+        margin-bottom: -20px;
+      }
+      h2 {
+        color: rgba(0,0,0,0.5);
+      }
+      h3 {
+        color: rgba(0,0,0,0.5);
+      }
+      a {
+        color: rgba(0,0,255,0.45);
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <script src="permissions.json"></script>
+  </head>
+  <body>
+    <p>This is a recreation of <a href="https://gist.github.com/dariusk/294cbaa7fb348416e865">a program that I wrote when I was 15 years old</a> (June 15, 1999), called TIMEKILL.CPP
+    <br>I'm preserving its output here, because it's an early example of a lot of the work I do today.
+    <br>I especially enjoyed the comment on line 1 of the program: "A Program In Which The Participant May Kill Time"
+    <br>-Darius Kazemi, July 7 2013</p>
+
+    <h3>Recently foricbly declassified files: proceed?</h3>
+    <button onclick="makePhrase()">Y</button>
+    <p id="phrases"></p>
+
+
+
+    <script>
+    var names = [
+      'Nixon',
+      'Erwin',
+      'Darius',
+      'Di',
+      'Wybili',
+      'DaVinci',
+      'Mario',
+      'Pancho',
+      'Eris',
+      'Quixote',
+      'Gandhi',
+      'Christ',
+      'Mandrake',
+      'Crowley',
+      'Clinton',
+      'Reagan',
+      'Napoleon',
+      'Caesar'
+    ];
+    var nouns = [
+      'orangutan',
+      'star',
+      'bus',
+      'hope',
+      'alien',
+      'messiah',
+      'end',
+      'NRA',
+      'CIA',
+      'FBI',
+      'PTA',
+      'dead',
+      'armaments',
+      'bomb',
+      'jihad',
+      'society',
+      'school',
+      'beast',
+      'militia'
+    ];
+    var verbs = [
+      'shot',
+      'saw',
+      'ate',
+      'took',
+      'jumped',
+      'washed',
+      'voided',
+      'wrote',
+      'was',
+      'hated',
+      'named',
+      'raised',
+      'broke',
+      'invaded',
+      'decimated',
+      'infiltrated',
+      'cured',
+      'lead',
+      'armed'
+    ];
+
+    Array.prototype.pick = function() {
+      return this[Math.floor(Math.random()*this.length)];
+    }
+
+    function makePhrase() {
+      $('#phrases').append('<br>'+names.pick()+' '+verbs.pick()+' the '+nouns.pick());
+    }
+
+
+    </script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-339043-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+    </script>
+ </body>
+</html>
